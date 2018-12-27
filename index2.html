@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.css" />
+		<style>
+			*{
+				word-break: break-all;
+			}
+			header{
+				height: 86px;
+				width: 100%;
+				max-width: 600px;
+				background-image: linear-gradient(-94deg, #FA6450 0%, #FA9750 83%);
+				background-size: 100% 100%;
+				box-sizing: border-box;
+				padding-left: 2%;
+				padding-right: 2%;
+				position: absolute;
+				left: 0px;
+			}
+			header *{
+				color: #F0F0F0;
+			}
+			header font:nth-of-type(1){
+				font-family: HelveticaNeue;
+			}
+			header font:nth-of-type(2){
+				font-family: HelveticaNeue;
+				letter-spacing: 1.2px;
+			}
+			header ul{
+				float: left;
+			}
+			header ul li{
+				float: left;
+				margin-left: 0.2rem;
+			}
+			.td1_div1{
+				height: 0.55rem; 
+				width: 0.55rem; 
+				border-radius: 100%; 
+				background-color: white; 
+				display: inline-block;
+			}
+			.td1_div2{
+				height: 0.55rem; 
+				width: 0.55rem; 
+				border-radius: 100%; 
+				border: 1px solid white;
+				display: inline-block;
+			}
+			.item{
+				font-size: 1.25rem;
+				padding-left: 12%;
+				line-height: 2rem;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="warp" style="width: 100%;height: 100%;position: absolute;padding-right: 5%;padding-left: 5%;max-width: 600px;">
+		<header>
+			<table style="width: 100%;margin: 6px auto;">
+				<tr>
+					<td style="width: 60.5px;">
+						<div class="td1_div1"></div>
+						<div class="td1_div1"></div>
+						<div class="td1_div1"></div>
+						<div class="td1_div2"></div>
+						<div class="td1_div2"></div>
+					</td>
+					<td style="width: 38px;vertical-align: middle; text-align: center;">
+						<font>SDG</font>
+					</td>
+					<td style="width: 21.5px;vertical-align: middle;">
+						<i class="icon ion-wifi" style="color: #F0F0F0;font-size: 1.4rem;"></i>
+					</td>
+					<td style="text-align: center;vertical-align: middle;">
+						<font>9 : 41 AM</font>
+					</td>
+					<td style="width: 90px;text-align: right;vertical-align: middle;">
+						<font>100%</font>
+					</td>
+					<td style="width: 30px;text-align: right;vertical-align: middle; font-size: 1.4rem;">
+						<i class ="icon ion-battery-full"></i>
+					</td>
+				</tr>
+			</table>
+			<p style="padding-top: 14px; font-size: 1.4rem; width: 100%;" class="row">
+				<i class="icon ion-chevron-left col-10"></i>
+				<font class="col-80" style="text-align: center;">Contact Us</font>
+			</p>
+		</header>
+		<div class="content scroll-content" style="margin-top: 86px; overflow-y: auto;overflow-x: hidden; background-color: #FAFAFA; text-align: center;">
+			<img src="img/img_contact.png" style="height: 135px; width: 135px; margin: 13% auto 2%;" />
+			<p style="margin-bottom: 6.6%; color: #CECECE;font-family: HelveticaNeue;">3.0</p>
+			<ul class="list">
+				<li class="item">E-mail:cs@danapinjam.com</li>
+				<li class="item">Whats APP:081383662454</li>
+				<li class="item">087788876279</li>
+			</ul>
+			<div style="height: 10px; width: 100%;"></div>
+		</div>
+	</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+<script>
+	$("#ul2 p").toggle();
+	$("#ul2 li").addClass("row");
+	$("#ul2 li").click(function(){
+		if ($(this).children("div").eq(1).children("i").hasClass("ion-chevron-down")) {
+			$(this).children("div").eq(1).children("i").removeClass("ion-chevron-down");
+			$(this).children("div").eq(1).children("i").addClass("ion-chevron-up");
+		} else{
+			$(this).children("div").eq(1).children("i").removeClass("ion-chevron-up");
+			$(this).children("div").eq(1).children("i").addClass("ion-chevron-down");
+		}
+		$(this).next().toggle();
+	});
+</script>
